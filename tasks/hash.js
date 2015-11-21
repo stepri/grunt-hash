@@ -46,8 +46,8 @@ module.exports = function(grunt) {
         var ext = path.extname(src);
         var basename = path.basename(src, ext);
 
-        var newFile = basename + (hash ? options.hashSeparator + hash : '') + ext;
-        var outputPath = path.join(destPath, newFile);
+        var newFile = (hash ? options.hashSeparator + hash : '') + ext;
+        var outputPath = path.join(destPath, basename + (hash ? options.hashSeparator + hash : '') + ext);
 
         var key = path.relative(file.orig.dest, file.dest);
         var outKey = path.relative(file.orig.dest, outputPath);
