@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         grunt.file.copy(src, outputPath);
         grunt.log.writeln('Generated: ' + outputPath);
 
-        map[unixify(key)] = unixify(outKey);
+        map[unixify(newFile)] = unixify(outKey);
       });
     });
 
